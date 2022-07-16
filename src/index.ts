@@ -9,10 +9,12 @@ const client = new DiscordJS.Client({
 	]
 });
 
+// Add Event When Client is ready.
 client.on('ready', () => {
 	console.log("Jeremy is already landing to the field.");
 });
 
+// Add Event when client is responding to a message.
 client.on('messageCreate', message => {
 	if(message.content.toLowerCase() === "hello jeremy") {
 		message.reply({
@@ -21,4 +23,5 @@ client.on('messageCreate', message => {
 	}
 });
 
+// Login with Token. 
 client.login(process.env.TOKEN); 
