@@ -7,9 +7,10 @@
     "license": "MIT",
     "scripts": {
         "build": "tsc",
-        "run": "node dist/app.js",
-        "dev": "tsc && node dist/app.js",
-        "test": "ts-node src/app.ts"
+        "build:w": "tsc --watch",
+        "start": "node dist/index.js",
+        "dev": "nodemon dist/index.js",
+        "test": "ts-node src/index.ts"
     },
     "dependencies": {
         "@discordjs/rest": "^0.5.0",
@@ -22,7 +23,9 @@
         "eslint": "^8.19.0",
         "eslint-config-prettier": "^8.5.0",
         "lodash": "^4.17.21",
-        "nodemon": "^2.0.15",
         "prettier": "^2.7.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.19"
     }
 }
